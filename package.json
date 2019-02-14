@@ -1,0 +1,30 @@
+{
+  "name": "parcel-template",
+  "version": "1.0.0",
+  "private": true,
+  "license": "MIT",
+  "scripts": {
+    "dev": "concurrently -k \"yarn watch\" \"node browsersync.js\"",
+    "start": "parcel src/*.html --public-url ./",
+    "watch": "parcel watch src/*.html --public-url ./",
+    "prebuild": "rm -rf dist",
+    "build": "parcel build src/*.html --public-url ./",
+    "deploy": "./deploy.sh"
+  },
+  "devDependencies": {
+    "concurrently": "^4.1.0",
+    "htmlnano": "^0.2.2",
+    "parcel-bundler": "^1.11.0",
+    "parcel-plugin-static-files-copy": "^2.0.0",
+    "sass": "^1.16.1"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.7.0",
+    "bootstrap": "^4.2.1",
+    "browser-sync": "^2.26.3",
+    "jquery": "^3.3.1",
+    "popper.js": "^1.14.7",
+    "swiper": "^4.4.6",
+    "tether": "^1.4.5"
+  }
+}
